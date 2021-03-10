@@ -28,6 +28,17 @@
 #
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
+ja:
+  activerecord:
+    models:
+      post: ポスト
+    attributes:
+      post:
+        title: タスク名
+        start_at: 日付
+        times: 所要時間
+        importance: 重要度
+        memo: 内容
 
 en:
   hello: "Hello world"
