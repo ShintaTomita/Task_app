@@ -11,6 +11,12 @@
   </head>
 
   <body>
+  <header>
+    <h1><a href="/">TaskForce</a></h1>
+  </header>
     <%= yield %>
+    <footer>
+      <h2>現在: <%= Time.now.to_s(:datetime_jp) %></h2>
+    </footer>
   </body>
 </html>

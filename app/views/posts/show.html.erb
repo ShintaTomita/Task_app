@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="title">
+    <h2>タスク詳細</h2>
+  </div>
+
+  <div class="content">
+    <table>
+      <tr>
+        <th>タスク名</th>
+        <td><%= @post.title%></td>
+      </tr>
+      <tr>
+        <th>日付</th>
+        <td><%= @post.start_at.to_s(:datetime_jp)%></td>
+      </tr>
+      <tr>
+        <th>所要時間</th>
+        <td><%= @post.times%></td>
+      </tr>
+      <tr>
+        <th>重要度</th>
+        <td><%= @post.importance %></td>
+      </tr>
+      <tr>
+        <th>内容</th>
+        <td><%= @post.memo%></td>
+      </tr>
+    </table>
+    <div class="menu">
+      <ul>
+        <li><%= link_to "編集する", [:edit_post], class:"menu-item"%></li>
+        <li><%= link_to "削除する", "/posts/#{@post.id}", method: :delete, class:"menu-item"%></li>
+        <li><%= link_to "タスク一覧へ戻る", "/", class:"menu-item" %></li>
+      </ul>
+    </div>
+  </div>
+</div>
